@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>FrontEnd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        var headers = new Headers({
+            "X-Api-Key": "328614020f5642b6a2012ac6e7612d3f"
+        });
+       
+        fetch('https://localhost:7248/api/Genders', {headers})
+        .then(response => response.text())
+        .then(data => console.log(data));
+    </script>
+</body>
+</html>

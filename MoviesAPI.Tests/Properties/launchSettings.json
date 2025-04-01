@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "MoviesAPI.Tests": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:47854;http://localhost:47855"
+    }
+  }
+}
