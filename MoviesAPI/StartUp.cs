@@ -10,6 +10,7 @@ using MoviesAPI.Helpers;
 using MoviesAPI.Jobs;
 using MoviesAPI.Middlewares;
 using MoviesAPI.Services;
+using MoviesAPI.Services.Keyed;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
 using Serilog;
@@ -84,6 +85,11 @@ namespace MoviesAPI
             services.AddTransient<IKeysService, KeysService>();
             services.AddTransient<IHashService, HashService>();
 
+            // Keyed
+            services.AddKeyedScoped<IAIService, OpenAIService>("openai");
+            services.AddKeyedScoped<IAIService, GeminiService>("gemini");
+
+            // Hosted Services (Background)
             services.AddHostedService<InvoicesBackgroundService>();
         }
 
